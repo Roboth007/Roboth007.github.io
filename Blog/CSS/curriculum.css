@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    background-color: #f5f5f5;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ============================================================
+   NAVEGAÇÃO
+   ============================================================ */
+nav {
+    width: 100%;
+}
+
+.menubar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: blueviolet;
+    box-shadow: 0 0 12px 3px rgba(138, 43, 226, 0.8),
+                0 0 24px 6px rgba(138, 43, 226, 0.4);
+    z-index: 10; 
+}
+
+.textmenu {
+    position: fixed;
+    top: 9px;
+    left: 65px;
+    color: white;
+    z-index: 12;
+}
+
+.textmenu h1 {
+    font-size: 30px;
+}
+
+.menuicon {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+}
+
+.menuicon button {
+    background-color: blueviolet;
+    border: none;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.menuicon button:hover {
+    background-color: rgb(113, 19, 201);
+}
+
+.side-menu {
+    position: fixed;
+    top: 50px; 
+    left: -250px;
+    width: 250px;
+    height: calc(100vh - 50px);
+    background-color: #2c2c2c;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    z-index: 11;
+}
+
+.side-menu.active {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu ul li {
+    border-bottom: 1px solid #444;
+}
+
+.side-menu ul li a {
+    display: block;
+    padding: 16px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: sans-serif;
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+
+.side-menu ul li a:hover {
+    background-color: blueviolet;
+    padding-left: 25px;
+}
+
+/* ============================================================
+   PRINCIPAL
+   ============================================================ */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-top: 88px;
+    padding-bottom: 48px;
+    max-width: 100ch;
+}
+
+article {
+    width: 100%;
+    padding: 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+article h1 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: 0.01em;
+    padding-bottom: 10px;
+    border-bottom: 3px solid blueviolet;
+    margin-top: 20px;
+}
+
+/* ============================================================
+   FORMAÇÕES
+   ============================================================ */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid blueviolet;
+    box-shadow:
+        0 2px 8px rgba(138, 43, 226, 0.08),
+        0 6px 24px rgba(0, 0, 0, 0.07);
+}
+
+th {
+    background-color: blueviolet;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 14px 18px;
+    text-align: left;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid blueviolet;
+}
+
+th:last-child {
+    border-right: none;
+}
+
+td {
+    padding: 13px 18px;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background 0.18s;
+    line-height: 1.5;
+}
+
+td:last-child {
+    border-right: none;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:nth-child(even) td {
+    background-color: #f0f0f0;
+}
+
+tr:not(:first-child):hover td {
+    background-color: rgba(138, 43, 226, 0.07);
+}
+
+td:first-child {
+    font-weight: 600;
+    color: #111;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+    color: #666666;
+    font-size: 0.85rem;
+}
+
+tr:last-child td:nth-child(3) {
+    color: blueviolet;
+    font-weight: 600;
+}
+
+/* ============================================================
+   Experiências
+   ============================================================ */
+article ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+article li {
+    background: #ffffff;
+    border: 2px solid blueviolet;
+    border-radius: 8px;
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    line-height: 1.6;
+    box-shadow: 0 2px 8px rgba(138, 43, 226, 0.06);
+    transition: background 0.2s, transform 0.2s;
+}
+
+article li::before {
+    content: '▸ ';
+    color: blueviolet;
+    font-size: 0.75rem;
+}
+
+article li:hover {
+    background: rgba(138, 43, 226, 0.04);
+    transform: translateX(3px);
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: white; }
+::-webkit-scrollbar-thumb  { background: blueviolet; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #e0e0e0; }
+
+/* ============================================================
+   Font-Size
+   ============================================================ */
+.font-size-btn {
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 40px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+    font-family: sans-serif;
+}
+
+.font-size-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+#fontIncrease {
+    right: 240px;
+    font-size: 20px;
+}
+
+#fontDecrease {
+    right: 200px;
+    font-size: 13px;
+}
+
+/* ============================================================
+   Dark-Mode
+   ============================================================ */
+.dark-mode-toggle {
+    position: fixed;
+    top: 0;
+    right: 100px; 
+    height: 50px; 
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 12; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+body.dark-mode {
+    background-color: #121212; 
+    color: #f5f5f5; 
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+    color: #ffffff;
+}
+
+body.dark-mode table {
+    background-color: #121212 !important;
+}
+
+body.dark-mode tr:nth-child(even) td {
+    background-color: #1e1e1e !important; 
+}
+
+body.dark-mode td {
+    border-color: #333333 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode td:first-child {
+    color: #ffffff !important; 
+}
+
+body.dark-mode td:nth-child(2),
+body.dark-mode td:nth-child(3) {
+    color: #bbbbbb !important; 
+}
+
+body.dark-mode tr:not(:first-child):hover td {
+    background-color: rgba(138, 43, 226, 0.2) !important;
+}
+
+body.dark-mode article li {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5) !important; 
+}
+
+body.dark-mode article li::before {
+    color: #b366ff !important;
+}
+
+body.dark-mode article li:hover {
+    background-color: rgba(138, 43, 226, 0.1) !important;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="CSS/fontes.css" rel="stylesheet" />
+    <link href="CSS/index.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menubar"></div>
+            <div class="textmenu">
+                <h1>Bit Blog</h1>
+            </div>
+            <div class="menuicon">
+                <button id="btnMenu"><img src="assets/menuBlack.png" width="50px" height="50px" alt="Menu"></button>
+            </div>
+            <button id="fontIncrease" class="font-size-btn" title="Aumentar fonte">A</button>
+            <button id="fontDecrease" class="font-size-btn font-size-btn--small" title="Diminuir fonte">a</button>
+            <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+            <aside class="side-menu" id="sideMenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="HTML/about.html">About me</a></li>
+                    <li><a href="HTML/curriculum.html">Currículo</a></li>
+                    <li><a href="HTML/contact.html">Contato</a></li>
+                    <li><a href="HTML/receitas.html">Receitas</a></li>
+                </ul>
+            </aside>
+        </nav>
+        <img class="avataricon" src="assets/perfil.jpg" width="300px" height="300px" alt="Foto do autor do blog" />
+        <h1>BEM-VINDO AO MEU BLOG</h1>
+    </header>
+    <main>
+        <section class="apresent">
+            <p>
+                Este é meu trabalho para a faculdade, porém no futuro pretendo fazer algumas mudanças para torná-lo
+                meu blog de apresentação para empresas, com projetos a mostra e outras coisas que empresas gostam.
+                Por enquanto este blog fala sobre mim, minha jornada acadêmica, profissional, conquistas e
+                habilidades, com uma surpresinha lá no finalzinho.
+            </p>
+        </section>
+        <section class="posts-section">
+            <h2>Últimas Postagens</h2>
+            <div class="posts-grid">
+                <a class="post-card"
+                    href="https://www.cisoadvisor.com.br/falha-no-linux-expoe-sistemas-ao-controle-total/"
+                    target="_blank">
+                    <img src="assets/lock.jpeg" alt="Cadeado" />
+                    <figcaption>Falha no Linux expõe sistemas ao controle total</figcaption>
+                </a>
+                <a class="post-card"
+                    href="https://gameplayscassi.com.br/noticias/subnautica-2-dominou-as-listas-de-mais-vendidos-do-steam-na-semana-passada/122775/"
+                    target="_blank">
+                    <img src="assets/subnautica2.jpg" alt="Subnautica 2" />
+                    <figcaption>Subnautica 2 dominou as listas de mais vendidos do Steam na semana passada</figcaption>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2026 Bit Blog. Todos os direitos reservados.</p>
+    </footer>
+    <script src="JS/sideMenu.js"></script>
+</body>
+</html>

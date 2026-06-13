@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link href="../CSS/fontes.css" rel="stylesheet" />
+    <link href="../CSS/about.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menubar"></div>
+            <div class="textmenu">
+                <h1>Bit Blog</h1>
+            </div>
+            <div class="menuicon">
+                <button id="btnMenu"><img src="../assets/menuBlack.png" width="50px" height="50px" alt="Menu"></button>
+            </div>
+            <button id="fontIncrease" class="font-size-btn" title="Aumentar fonte">A</button>
+            <button id="fontDecrease" class="font-size-btn" title="Diminuir fonte">a</button>
+            <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+            <aside>
+                <div class="side-menu" id="sideMenu">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About me</a></li>
+                        <li><a href="curriculum.html">Currículo</a></li>
+                        <li><a href="contact.html">Contato</a></li>
+                        <li><a href="receitas.html">Receitas</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Minha Jornada</h1>
+            <p>
+                Começei meus estudos na Escola de Ensino Fundamental Sinodal Sete de Setembro, um pouco mais tarde
+                começei a frequentar a
+                escola de idiomas FISK, meu ensino médio começou em 2023 no Instituto Estadual de Educação São
+                Francisco Solano,
+                me formei na FISK também em 2023 e em 2024 começei o curso de Operador de
+                Processos Logísticos Industriais
+                pelo SENAI, onde tive a oportunidade de participar do Projeto Integrador de 2024, em 2025 fui
+                contratado como
+                estagiário de nível médio na área de logística pela empresa JAN S/A, em 2026 começei a faculdade de
+                Ciência da Computação
+                na Universidade de Passo Fundo, também fui recontratado como estágiario de nível superior pela mesma
+                empresa.
+            </p>
+            <h2>Objetivos</h2>
+            <p>
+                Meus objetivos
+                atualmente são começar a trabalhar na área da tecnologia, desenvolver um jogo (foi um dos vários motivos
+                que escolhi está área)
+                e começar a realizar projetos em casa para aumentar meu conhecimento na área.
+            </p>
+            <div class="cards-grid">
+                <div class="card" onclick="openModal('open-solano')">
+                    <div class="card-thumb">
+                        <img src="../assets/solano.jpeg" alt="Foto com o canudo da formatura do Solano" />
+                    </div>
+                    <div class="card-info">
+                        <span class="card-label">🎓 Formatura</span>
+                        <p>Formatura Solano</p>
+                    </div>
+                </div>
+                <div class="card" onclick="openModal('open-projeto')">
+                    <div class="card-thumb">
+                        <img src="../assets/Projeto.jpeg" alt="Foto da equipe do projeto integrador no SENAI" />
+                    </div>
+                    <div class="card-info">
+                        <span class="card-label">🏭 SENAI</span>
+                        <p>Projeto Integrador 2024</p>
+                    </div>
+                </div>
+                <div class="card" onclick="openModal('open-fisk')">
+                    <div class="card-thumb">
+                        <img src="../assets/fisk.jpeg" alt="Foto da formatura da escola de idiomas FISK" />
+                    </div>
+                    <div class="card-info">
+                        <span class="card-label">🌐 Idiomas</span>
+                        <p>Formatura FISK</p>
+                    </div>
+                </div>
+            </div>
+            <div class="open" id="open-solano" onclick="closeModal(this)">
+                <div class="open-content" onclick="event.stopPropagation()">
+                    <button class="open-close" onclick="closeModal(document.getElementById('open-solano'))">✕</button>
+                    <img src="../assets/solano.jpeg" alt="Foto com o canudo da formatura do Solano" />
+                </div>
+            </div>
+            <div class="open" id="open-projeto" onclick="closeModal(this)">
+                <div class="open-content" onclick="event.stopPropagation()">
+                    <button class="open-close" onclick="closeModal(document.getElementById('open-projeto'))">✕</button>
+                    <img src="../assets/Projeto.jpeg" alt="Foto da equipe do projeto integrador no SENAI" />
+                </div>
+            </div>
+            <div class="open" id="open-fisk" onclick="closeModal(this)">
+                <div class="open-content" onclick="event.stopPropagation()">
+                    <button class="open-close" onclick="closeModal(document.getElementById('open-fisk'))">✕</button>
+                    <img src="../assets/fisk.jpeg" alt="Foto da formatura da escola de idiomas FISK" />
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>© 2026 Bit Blog. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../JS/about.js"></script>
+    <script src="../JS/sideMenu.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Finlandica+Headline:ital,wght@0,100..900;1,100..900&family=Finlandica+Text:ital,wght@0,100..900;1,100..900&display=swap');
+
+p {
+    font-family: 'Finlandica Text', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Finlandica Headline', sans-serif;
+}
+
+figcaption {
+    font-family: 'Finlandica Headline', sans-serif;
+}
+
+span {
+    font-family: 'Finlandica Headline', sans-serif;
+}
+
+th {
+    font-family: 'Finlandica Headline', sans-serif;
+}
+
+td {
+    font-family: 'Finlandica Text', sans-serif;
+}
+
+li {
+    font-family: 'Finlandica Text', sans-serif;
+}
+
+label {
+    font-family: 'Finlandica Headline', sans-serif;
+}
+
+::placeholder {
+    font-family: 'Finlandica Text', sans-serif;
+}
+
+button {
+    font-family: 'Finlandica Headline', sans-serif;
+}
+
+#successMsg {
+    font-family: 'Finlandica Text', sans-serif;
+}
+
+sup {
+    font-family: 'Finlandica Text', sans-serif;
+    vertical-align: super;
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+    top: -0.4em;
+}

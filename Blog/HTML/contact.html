@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link href="../CSS/fontes.css" rel="stylesheet" />
+    <link href="../CSS/contact.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menubar"></div>
+            <div class="textmenu">
+                <h1>Bit Blog</h1>
+            </div>
+            <div class="menuicon">
+                <button id="btnMenu"><img src="../assets/menuBlack.png" width="50px" height="50px" alt="Menu"></button>
+            </div>
+            <button id="fontIncrease" class="font-size-btn" title="Aumentar fonte">A</button>
+            <button id="fontDecrease" class="font-size-btn" title="Diminuir fonte">a</button>
+            <button id="darkModeToggle" class="dark-mode-toggle">🌙</button>
+            <aside>
+                <div class="side-menu" id="sideMenu">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About me</a></li>
+                        <li><a href="curriculum.html">Currículo</a></li>
+                        <li><a href="contact.html">Contato</a></li>
+                        <li><a href="receitas.html">Receitas</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </nav>
+        <h1>Caso tenha interesse em mim, preencha esse pequeno formulário</h1>
+    </header>
+    <main>
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input required id="name" name="name" type="text" placeholder="Empresa ou pessoal" />
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input required id="email" name="email" type="email" placeholder="Empresarial ou pessoal" />
+            </div>
+            <div class="form-group">
+                <label for="vaga">Vaga Oferecida <span class="optional">(opcional)</span></label>
+                <textarea id="vaga" name="vaga" placeholder="Responsabilidades e informações importantes"></textarea>
+            </div>
+            <div class="success-msg" id="successMsg">
+                ✓ Mensagem enviada! Entrarei em contato em breve.
+            </div>
+            <button type="submit" class="submit-btn">Enviar mensagem</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2026 Bit Blog. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../JS/contact.js"></script>
+    <script src="../JS/sideMenu.js"></script>
+</body>
+</html>
